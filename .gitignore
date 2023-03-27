@@ -17,4 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/Recursos
+/.cozastore
+/.cali-admin-master
