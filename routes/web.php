@@ -24,4 +24,3 @@ Route::get('/dash/crud', function() {
 Route::get('/dash/crud/create', function () {
     return view('crud.create');
 });
-
