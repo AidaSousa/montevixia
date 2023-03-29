@@ -1,7 +1,11 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+
+            <a href="/">
+                <img src="/img/anpa.svg" alt="Mi logo" class="">
+            </a>
+
         </x-slot>
 
         <x-validation-errors class="mb-4" />
