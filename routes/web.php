@@ -12,6 +12,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+
     Route::get('/dash', function () {
         return view('dash.index');
     })->name('dash');
@@ -24,3 +25,4 @@ Route::get('/dash/crud', function() {
 Route::get('/dash/crud/create', function () {
     return view('crud.create');
 });
+
