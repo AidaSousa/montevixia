@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('date');
             $table->float('price_no_associated');
             $table->float('price_associated');
+            $table->dateTime('date_finilized');
             $table->unsignedBigInteger('category_id');
             $table->timestamps();
 

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->float('amount');
-            $table->enum('payment_for',['cuota', 'evento']);
+            $table->enum('payment_for',['quota', 'event']);
             $table->unsignedBigInteger('event_id')->nullable();
             $table->timestamps();
 
