@@ -20,6 +20,7 @@ class User extends Authenticatable
     use TwoFactorAuthenticatable;
     use HasRoles;
 
+
     /**
      * The attributes that are mass assignable.
      *
@@ -61,6 +62,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $appends = [
+
         
     ];
 
@@ -75,5 +77,9 @@ class User extends Authenticatable
     public function payments() {
         return $this->hasMany(Payment::class);
     }
+
+
+        'profile_photo_url',
+    ];
 
 }
