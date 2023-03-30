@@ -7,13 +7,16 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Jetstream\Contracts\DeletesUsers;
+use Illuminate\Validation\Rule;
+use Laravel\Fortify\Contracts\UpdatesUserProfileInformation;
 
 class UserController extends Controller
 {
     public function userIndex() {
         
         $user = User::paginate(10);
-        return view('user.index', compact('user'));
+        return view('user.index', ['user' => $user]);
     }
 
     public function userCreate() {
@@ -49,6 +52,7 @@ class UserController extends Controller
         return view('user.profile', ['user' => $user]);
     }
 
+
     public function userUpdate(Request $request, $id) {
         
         $user = User::find($id);
@@ -67,10 +71,18 @@ class UserController extends Controller
         return redirect()->route('user.profile')->with('succes', 'Profile updated successfully!!');
     }
 
-    public function userDelete($id) {
-        $user = User::find($id);
-        $user->delete();
+    public function userDelete(DeletesUsers $deleter)
+    {
+        $user = Auth::user();
+        $deleter->delete($user);
+        Auth::logout();
         return redirect()->route('home')->with('success', 'User deleted successfully!!');
     }
+
+    // public function userDelete($id) {
+    //     $user = User::find($id);
+    //     $user->delete();
+    //     return redirect()->route('home')->with('success', 'User deleted successfully!!');
+    // }
     
 }

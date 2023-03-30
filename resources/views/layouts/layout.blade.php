@@ -72,7 +72,11 @@
 							</li>
 
 							<li>
-								<a href="blog.html">Login / Registro</a>
+								<a href="{{ route('login') }}">Login</a>
+                            </li>
+
+							<li>
+								<a href="blog.html">Registro</a>
                             </li>
 						</ul>
 					</div>	

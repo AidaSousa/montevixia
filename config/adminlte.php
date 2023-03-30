@@ -312,6 +312,13 @@ return [
             'can'  => 'manage-blog',
         ],
         [
+            'text'        => 'Usuarios Registrados',
+            'url'         => 'dash/',
+            'icon'        => 'far fa-fw fa-user',
+            // 'label'       => 4,
+            // 'label_color' => 'success',
+        ],
+        [
             'text'        => 'Actividades',
             'url'         => 'dash/crud',
             'icon'        => 'far fa-fw fa-file',

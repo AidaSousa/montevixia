@@ -61,10 +61,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $appends = [
+    // protected $appends = [
 
         
-    ];
+    // ];
 
     public function children() {
         return $this->hasMany(Child::class);
@@ -77,9 +77,5 @@ class User extends Authenticatable
     public function payments() {
         return $this->hasMany(Payment::class);
     }
-
-
-        'profile_photo_url',
-    ;
 
 }

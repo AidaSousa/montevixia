@@ -1,4 +1,10 @@
-@extends('layouts.layout')
+@extends('adminlte::page')
+
+@section('title', 'Usuarios')
+
+@section('content_header')
+    <h1>Usuarios</h1>
+@stop
 
 @section('content')
     <div class="container">
@@ -16,18 +22,29 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($users as $user)
+                    @if(is_array($user) || is_object($user))
+                        @foreach($user as $member)
                             <tr>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->surname }}</td>
-                                <td>{{ $user->phone }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->is_associated ? 'Yes' : 'No' }}</td>
+                                <td>{{ $member->name }}</td>
+                                <td>{{ $member->surname }}</td>
+                                <td>{{ $member->phone }}</td>
+                                <td>{{ $member->email }}</td>
+                                <td>{{ $member->is_associated ? 'Yes' : 'No' }}</td>
                             </tr>
                         @endforeach
+                    @endif
                     </tbody>
+                    
                 </table>
             </div>
         </div>
     </div>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
