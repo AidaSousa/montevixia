@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('components.calendar');
+    return view('home');
 });
 
 Route::middleware([

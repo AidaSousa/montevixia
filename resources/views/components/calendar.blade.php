@@ -28,7 +28,7 @@
    
   <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-6 my-3">
             <div id="calendar"></div>
         </div>
     </div>
