@@ -28,9 +28,9 @@
       <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-md-8 text-center">
-            <h1 class="mb-4">Men New-Season</h1>
-            <p class="lead mb-4">Jackets & Coats</p>
-            <a class="btn btn-primary btn-lg" href="product.html">Shop Now</a>
+            <h1 class="mb-4">Actividad 2</h1>
+            <p class="lead mb-4">Descripción</p>
+            <a class="btn btn-primary btn-lg" href="product.html">Ver</a>
           </div>
         </div>
       </div>
@@ -39,9 +39,9 @@
       <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-md-8 text-center">
-            <h1 class="mb-4">Men Collection 2018</h1>
-            <p class="lead mb-4">New arrivals</p>
-            <a class="btn btn-primary btn-lg" href="product.html">Shop Now</a>
+            <h1 class="mb-4">Actividad 3</h1>
+            <p class="lead mb-4">Descripción</p>
+            <a class="btn btn-primary btn-lg" href="product.html">Ver</a>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Ver</span>
   </a>
 </div>
 
