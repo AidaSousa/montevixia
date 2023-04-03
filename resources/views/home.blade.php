@@ -2,9 +2,6 @@
 
 @section('content')
 
-<body class="animsition">
- hola
-
  <!-- Slider -->
  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
