@@ -10,6 +10,10 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use Laravel\Cashier\Billable;
+use function Illuminate\Events\queueable;
+
+
 
 class User extends Authenticatable
 {
@@ -19,6 +23,7 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
     use HasRoles;
+    use Billable;
 
 
     /**
@@ -78,8 +83,5 @@ class User extends Authenticatable
         return $this->hasMany(Payment::class);
     }
 
-
-        'profile_photo_url',
-    ;
 
 }
